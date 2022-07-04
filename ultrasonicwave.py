@@ -13,9 +13,11 @@ GPIO.setup(ECHO, GPIO.IN)
 
 GPIO.output(TRIG, False)
 print ("output initialization")
-time.sleep(2)
+time.sleep(1)
 
 try :
+    start = 0
+    end = 0
     while True:
         GPIO.output(TRIG,True)
         time.sleep(0.00001)
