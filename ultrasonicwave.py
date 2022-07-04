@@ -25,11 +25,14 @@ try :
 
         while GPIO.input(ECHO) == 0:
             start = time.time()
+            print(start)
         
         while GPIO.input(ECHO) == 1:
             end = time.time()
+            print(end)
 
         check_time = end - start
+        print(check_time)
         distance = check_time * 17000
         print("Distance = %.1f cm" %distance)
         time.sleep(0.4)
