@@ -5,7 +5,7 @@ GPIO.setmode(GPIO.BCM) # (BCM 명령어를 사용하면 GPIO 넘버) : (BOARD �
 GPIO.setwarnings(False)
 
 TRIG = 8
-ECHO = 9
+ECHO = 25
 print ("Ultrasonic wave distance")
 
 GPIO.setup(TRIG, GPIO.OUT)
