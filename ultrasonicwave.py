@@ -1,6 +1,6 @@
 import RPi.GPIO as GPIO
 import time
-# test
+# test .
 GPIO.setmode(GPIO.BCM) # (BCM 명령어를 사용하면 GPIO 넘버) : (BOARD 명령어를 사용하면 핀 넘버) 
 GPIO.setwarnings(False)
 
