@@ -30,7 +30,7 @@ try :
             end = time.time()
 
         check_time = end - start
-        distance = check_time * 34300 / 2
+        distance = check_time * 17000
         print("Distance = %.1f cm" %distance)
         time.sleep(0.4)
 
