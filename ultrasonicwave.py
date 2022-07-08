@@ -3,7 +3,7 @@ import time
 import matplotlib.pyplot as plt
 import numpy as np
 
-# test ..
+# test ..1
 GPIO.setmode(GPIO.BCM) # (BCM 명령어를 사용하면 GPIO 넘버) : (BOARD 명령어를 사용하면 핀 넘버) 
 GPIO.setwarnings(False)
 
