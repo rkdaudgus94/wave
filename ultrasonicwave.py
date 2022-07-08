@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # test ..1
+# test
 GPIO.setmode(GPIO.BCM) # (BCM 명령어를 사용하면 GPIO 넘버) : (BOARD 명령어를 사용하면 핀 넘버) 
 GPIO.setwarnings(False)
 
@@ -24,7 +25,7 @@ try :
     start = 0
     end = 0
     sec = 0
-    while sec <= 10:
+    while sec >= 0:
         GPIO.output(TRIG,True)
         time.sleep(0.00001)
         GPIO.output(TRIG,False)
