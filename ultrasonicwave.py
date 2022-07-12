@@ -47,8 +47,8 @@ try :
         check_time = end - start
         dis = check_time * 17000
         print("Distance = %.1f cm" %dis)
-        time.sleep(0.5)
-        t = t + check_time
+        time.sleep(1)
+        t = t + 1
 
         second = np.append(second, t)
         distance  = np.append(distance,dis)
