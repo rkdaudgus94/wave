@@ -2,9 +2,9 @@ import RPi.GPIO as GPIO
 import time
 import matplotlib.pyplot as plt
 import numpy as np
+from drawnow import *
 
 # test ..1
-# test
 GPIO.setmode(GPIO.BCM) # (BCM 명령어를 사용하면 GPIO 넘버) : (BOARD 명령어를 사용하면 핀 넘버) 
 GPIO.setwarnings(False)
 
@@ -21,11 +21,18 @@ time.sleep(1)
 
 d = []
 
+def show_plot():
+    plt.plot(second,distance,label='distance')
+    plt.legend()
+    plt.grid()
+    plt.xlabel('t(sec)')
+    plt.ylabel('distance(cm)') 
+
 try :
     start = 0
     end = 0
-    sec = 0
-    while sec >= 0:
+    t = 0
+    while t >= 0:
         GPIO.output(TRIG,True)
         time.sleep(0.00001)
         GPIO.output(TRIG,False)
@@ -37,25 +44,21 @@ try :
             end = time.time()
 
         check_time = end - start
-        distance = check_time * 17000
+        dis = check_time * 17000
         print("Distance = %.1f cm" %distance)
-        time.sleep(1)
-        d.append(distance)
-        sec = sec + 1
+        time.sleep(0.5)
+        d.append(dis)
+        t = t + check_time
+
+        second = np.append(second, t)
+        distance  = np.append(dis, d)
+
+        drawnow(show_plot)
+
+
 
 except KeyboardInterrupt:
     print("Complete mesuring")
     GPIO.cleanup()
 
-# t  = np.arange(0,10,1)
-# d1 = np.d
-
-# fig, ax = plt.subplot()
-# ax.plot(t,d1)
-
-# ax.set(xlabel = 'time (s)', ylabel = 'distance (cm)',
-# title = 'Ultrasonic wave distance mesure')
-# ax.grid()
-
-# fig.savefig("test2,png")
-# plt.show()
+# fig = plt.figure(1)
