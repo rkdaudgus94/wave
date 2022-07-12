@@ -19,7 +19,8 @@ GPIO.output(TRIG, False)
 print ("output initialization")
 time.sleep(1)
 
-d = []
+distance = []
+second  = []
 
 def show_plot():
     plt.plot(second,distance,label='distance')
@@ -47,11 +48,10 @@ try :
         dis = check_time * 17000
         print("Distance = %.1f cm" %distance)
         time.sleep(0.5)
-        d.append(dis)
         t = t + check_time
 
         second = np.append(second, t)
-        distance  = np.append(dis, d)
+        distance  = np.append(distance,dis)
 
         drawnow(show_plot)
 
