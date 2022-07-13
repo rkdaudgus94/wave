@@ -53,7 +53,7 @@ try :
         second = np.append(second, t)
         distance  = np.append(distance,dis)
 
-        drawnow(show_plot)
+        # drawnow(show_plot)
 
 
 
