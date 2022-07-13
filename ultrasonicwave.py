@@ -53,7 +53,7 @@ try :
         second = np.append(second, t)
         distance  = np.append(distance,dis)
 
-        # drawnow(show_plot)
+        drawnow(show_plot)
 
 
 
@@ -61,4 +61,4 @@ except KeyboardInterrupt:
     print("Complete mesuring")
     GPIO.cleanup()
 
-# fig = plt.figure(1)
+#  fig = plt.figure(1)
