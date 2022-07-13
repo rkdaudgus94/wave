@@ -1,6 +1,4 @@
 import serial
-# ss
-
 port = '/dev/ttyACM0'
 brate = 115200
 ser = serial.Serial(port, brate)
