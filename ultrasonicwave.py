@@ -61,4 +61,4 @@ except KeyboardInterrupt:
     print("Complete mesuring")
     GPIO.cleanup()
 
-#  fig = plt.figure(1)
+#  fig = plt.figure(1).
