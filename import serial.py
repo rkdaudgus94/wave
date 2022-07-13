@@ -5,14 +5,14 @@ ser = serial.Serial(port, brate)
 while True :
     ch = input()
     if ch == 'stop' :
-        ser.write(ch.encode())
+        ser.write('stop'.encode())
         data = ser.readline()
         data = data.decode()[:len(data)-2]
         print(len(data))
         print(data)
         
-    if ch == 'foward' :
-        ser.write(ch.encode())  
+    if ch == 'front' :
+        ser.write('front'.encode())  
         data = ser.readline()
         data = data.decode()[:len(data)-2]
         print(len(data))
