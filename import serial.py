@@ -3,7 +3,7 @@ import serial
 
 port = '/dev/ttyACM0'
 brate = 115200
-ser = serial.serial(port, brate)
+ser = serial.Serial(port, brate)
 while True :
     ch = input()
     if ch == 'stop' :
