@@ -1,5 +1,5 @@
 import serial
-# s
+# ss
 
 port = '/dev/ttyACM0'
 brate = 115200
