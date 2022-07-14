@@ -49,6 +49,8 @@ try :
         print("Distance = %.1f cm" %dis)
         time.sleep(1)
         t = t + 1
+        if dis >= 50 :
+            dis = 50 
 
         second = np.append(second, t)
         distance  = np.append(distance,dis)
@@ -60,5 +62,3 @@ try :
 except KeyboardInterrupt:
     print("Complete mesuring")
     GPIO.cleanup()
-
-#  fig = plt.figure(1).
