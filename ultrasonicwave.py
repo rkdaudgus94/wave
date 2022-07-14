@@ -46,11 +46,11 @@ try :
 
         check_time = end - start
         dis = check_time * 17000
+        if dis >= 50 :
+            dis = 50
         print("Distance = %.1f cm" %dis)
         time.sleep(1)
-        t = t + 1
-        if dis >= 50 :
-            dis = 50 
+        t = t + 1 
 
         second = np.append(second, t)
         distance  = np.append(distance,dis)
