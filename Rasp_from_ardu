@@ -1,0 +1,11 @@
+from curses import baudrate
+import serial
+
+port = '' 
+baudrate = 9600
+ser = serial.Serial(port, baudrate, timeout= None)
+
+# 거리에 따라 모터가 돌아가는 속도 조정
+while True :
+    if distance >= 10 : 
+        
